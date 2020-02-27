@@ -29,12 +29,14 @@ export class RegistrationComponent implements OnInit{
     onSubmit() {
       this.submitted = true;
       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+      if (this.registerForm.invalid) {
+        return;
+     }
     }
     onReset() {
       this.submitted = false;
       this.registerForm.reset();
     }
-  
   }
 
 
