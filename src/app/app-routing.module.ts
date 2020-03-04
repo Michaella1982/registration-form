@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
-
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 const routes: Routes = [
-  { 
-    path: '', 
-    component: RegistrationComponent }
-
+  {
+    path: '',
+    component: RegistrationComponent,
+  },
+  {
+    path: 'confirmation',
+    component: ConfirmationComponent,
+  }
 ];
 
 @NgModule({
@@ -15,3 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
